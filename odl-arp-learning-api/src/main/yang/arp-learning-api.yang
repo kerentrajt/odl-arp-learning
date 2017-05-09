@@ -15,11 +15,11 @@ module odl-calculator-api {
         list ip_to_mac {
             key "ip_address";
             leaf mac {
-                description "ip address to mac address"
+                description "ip address to mac address";
                 type string; 
             }
             leaf ip_address{
-                description "ip address to mac address"
+                description "ip address to mac address";
                 type string; 
             }
         }
