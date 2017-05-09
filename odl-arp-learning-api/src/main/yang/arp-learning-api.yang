@@ -1,23 +1,28 @@
-module odl-arp-learning-api {
+module odl-calculator-api {
     yang-version 1;
-    namespace "urn:opendaylight:params:xml:ns:yang:odl-arp-learning-api:api";
-    prefix "odl-arp-learning-api";
+    namespace "urn:opendaylight:params:xml:ns:yang:odl-calculator-api:api";
+    prefix "odl-calculator-api";
 
     revision "2017-05-07" {
         description
             "Initial revision for Odl Test Api";
     }
 
-    container odl-arp-learning-api {
+
+    container odl-arp-api {
         config true;
-        description
-            "api for odl test";
-
-        leaf input {
-            type string;
-            description
-               "The name of the interface.";
+        description "contains mapping of ip address to mac";
+        list ip_to_mac_list {
+            key "ip_address,mac";
+            leaf {
+                description "ip address to mac address"
+                type string; 
+            }
+            leaf ip_address {
+                description "ip address to mac address"
+                type string; 
+            }
         }
-
     }
 }
+
