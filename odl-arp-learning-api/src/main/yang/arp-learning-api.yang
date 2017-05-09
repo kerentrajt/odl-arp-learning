@@ -12,13 +12,13 @@ module odl-calculator-api {
     container odl-arp-api {
         config true;
         description "contains mapping of ip address to mac";
-        list ip_to_mac_list {
-            key "ip_address,mac";
-            leaf {
+        list ip_to_mac {
+            key "ip_address";
+            leaf mac {
                 description "ip address to mac address"
                 type string; 
             }
-            leaf ip_address {
+            leaf ip_address{
                 description "ip address to mac address"
                 type string; 
             }
