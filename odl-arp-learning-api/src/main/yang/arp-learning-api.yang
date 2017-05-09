@@ -1,0 +1,23 @@
+module odl-arp-learning-api {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:odl-arp-learning-api:api";
+    prefix "odl-arp-learning-api";
+
+    revision "2017-05-07" {
+        description
+            "Initial revision for Odl Test Api";
+    }
+
+    container odl-arp-learning-api {
+        config true;
+        description
+            "api for odl test";
+
+        leaf input {
+            type string;
+            description
+               "The name of the interface.";
+        }
+
+    }
+}
