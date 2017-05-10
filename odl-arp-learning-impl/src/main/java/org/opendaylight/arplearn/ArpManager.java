@@ -14,7 +14,7 @@ import org.opendaylight.arplearn.util.FlowUtils;
 import org.opendaylight.controller.md.sal.binding.api.DataBroker;
 import org.opendaylight.genius.mdsalutil.interfaces.IMdsalApiManager;
 
-public class ArpManager {
+public class ArpManager implements AutoCloseable {
 
 	private final DataBroker dataBroker;
 	private final IMdsalApiManager mdsalApiManager;
@@ -32,6 +32,12 @@ public class ArpManager {
 	public void learn(BigInteger dpnId, short ofport, String mac, String ip) {
 		DBUtils.store(dataBroker, dpnId, ofport, mac, ip);
 		FlowUtils.createArpResponseFlow(mdsalApiManager, dpnId, ofport, mac, ip);
+	}
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

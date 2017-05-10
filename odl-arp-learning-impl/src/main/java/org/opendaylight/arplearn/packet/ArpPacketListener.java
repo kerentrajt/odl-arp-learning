@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 
 import io.netty.util.NetUtil;
 
-public class ArpPacketListener implements PacketProcessingListener {
+public class ArpPacketListener implements PacketProcessingListener{
 	private final PacketProcessingService pktService;
 	private final ArpManager arpManager;
 	private final DataBroker dataBroker;

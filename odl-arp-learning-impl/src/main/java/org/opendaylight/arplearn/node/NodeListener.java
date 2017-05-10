@@ -31,7 +31,7 @@ public class NodeListener extends AsyncDataTreeChangeListenerBase<Node, NodeList
 	}
 
 	public void start() {
-		registerListener(LogicalDatastoreType.OPERATIONAL, dataBroker);
+		registerListener(LogicalDatastoreType.CONFIGURATION, dataBroker);
 	}
 
 	@Override
